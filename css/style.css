@@ -534,6 +534,16 @@ i {
     height: 30px;
     line-height: 1;
 }
+
+
+
+.area1-5Table td:last-child {
+ 
+    /* border-top: 1px solid #ececec21; */
+    margin-top: -1px;
+    /* height: 38px; */
+}
+
 .errTableTtl {
     background-color: #ececec21;
     height: 30px;
