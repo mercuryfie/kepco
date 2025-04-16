@@ -1,0 +1,561 @@
+
+
+<!-- font1 ----------------------------  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Birthstone&display=swap" rel="stylesheet">
+<!-- icon fontawesome ----------------------------  -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+<!--CSS section--> 
+<link rel="stylesheet" href="./css/style32.css">  
+
+<!--JS section--> 
+<script src="./js/jQuery v3.7.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/kepco.js"></script>
+<script src="./js/GaugeMeter.js"></script>   
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        $(".GaugeMeter5").gaugeMeter({
+            theme: 'green',
+            color:'springgreen'
+        });
+        $(".GaugeMeter10").gaugeMeter({
+            theme: 'green',
+            color:'springgreen'
+        });
+
+    });
+
+
+</script>
+
+<main>
+    <section class="mainbanner">
+        <div class="" id="wrap">
+            <div class="areaWrap">
+                <div class="areaContainer">
+                    <div class=" upsideBox">
+                        <div class="date">
+                            <p>ff2025. 01. 01 (MON) 12:00:00</p>
+                            <p>☀️</p>
+                        </div>
+                        <div class="areaStatus">
+                            <p>📈 지역별 모니터링 현황</p>
+                            <p>updated 10min ago</p>
+                        </div>
+                        <div class="areaStatus1-2">
+                            <div class="areaAll">
+                                <div class="areaAllTtl">
+                                    <p>전체 지역 현황</p>
+                                    <p>전체 아파트 수 10,000</p>
+                                </div>
+                                <div class="allAreaGauge">
+                                    <div class="allAreaCard">
+                                        <p>장비전체</p>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="allAreaCard">
+                                        <p>동작</p>
+                                        <p>90</p>
+
+                                    </div>
+                                    <div class="allAreaCard">
+                                        <p>오류</p>
+                                        <p>10</p>
+
+                                    </div>
+                                    <div class="allAreaCard">
+                                        <p>가동률(%)</p>
+                                        <!--                                    <p>90%</p>-->
+                                        <div
+                                                class="GaugeMeter5"
+                                                id="GaugeMeter_120"
+                                                data-back="rgba(174,174,174,0.5)"
+                                                data-label=""
+                                                data-size="45"
+                                                data-style="arch"
+                                                data-width="6"
+                                                data-showvalue="true"
+                                                data-min="0"
+                                                data-total="100"
+                                                data-stripe="2"
+                                                data-used="90"
+                                                data-theme="green"
+                                                data-append=""
+                                        >
+                                        </div> 
+
+                                    </div> 
+                                </div>
+
+                            </div>
+                            <div class="areaEach">
+                                <div class="areaEachTtl">
+                                    <p>서울 지역 현황</p>
+                                    <p>전체 아파트 수 1,000</p>
+                                </div>
+                                <div class="eachAreaGauge">
+                                    <div class="eachAreaCard">
+                                        <p>장비전체</p>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="eachAreaCard">
+                                        <p>동작</p>
+                                        <p>90</p>
+                                    </div>
+                                    <div class="eachAreaCard">
+                                        <p>오류</p>
+                                        <p>10</p>
+                                    </div>
+                                    <div class="eachAreaCard">
+                                        <p>가동률(%)</p>
+                                        <p>90%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaStatus1-3">
+                            <div class="areaChart1-1">
+                                <div class="areaChartTtl">
+                                    <p>Monthly Update Status</p>
+                                    <div class="areaChartTtlRight">
+                                        <p>LOCATION</p>
+                                        <select name="" id="" class="areaSelect">
+                                            <option value="SEOUL">SEOUL</option>
+                                            <option value="SEOUL">SEOUL</option>
+                                            <option value="SEOUL">SEOUL</option>
+                                            <option value="SEOUL">SEOUL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="areaBar">
+                                    <canvas id="monthlyChart"></canvas>
+                                </div>
+
+                            </div>
+                            <div class="areaChart1-2">
+                                <div class="notiHead">
+                                    <p>NOTIFICATIONS</p>
+                                </div>
+                                <div class="noti">
+                                    <p>✅ 2시간 전</p>
+                                    <div>
+                                        <p>fetch update started</p>
+                                        <p>fetch updated ver.01 </p>
+                                    </div>
+                                </div>
+                                <div class="noti">
+                                    <p>✅ 3시간 전</p>
+                                    <div>
+                                        <p>fetch update started</p>
+                                        <p>fetch updated ver.01 </p>
+                                    </div>
+
+                                </div>
+                                <div class="noti">
+                                    <p>✅ 1일 전</p>
+                                    <div>
+                                        <p>fetch update started</p>
+                                        <p>fetch updated ver.01 </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areaBox errorBox">
+                        <div class="errorStatusTtl">
+                            <p>📈 오류 발생 및 장비 상태 현황</p>
+                            <div class="errorCount">
+                                <div>
+                                    <p>오류</p>
+                                    <p class="number red">10</p>
+                                </div>
+                                <div>
+                                    <p>조치중</p>
+                                    <p class="number yellow">3</p>
+
+                                </div>
+                                <div>
+                                    <p>해결</p>
+                                    <p class="number green">7</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="errorStatus">
+                            <div class="errorStatus1-1">
+                                <p>시간대별 오류 빈도</p>
+                                <div class="timelyChartBox">
+                                    <canvas id="timelyChart"></canvas>
+
+                                </div>
+
+                            </div>
+                            <div class="errorStatus1-2">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td class="col1 errTableTtl">지역</td>
+                                        <td class="errTableTtl">아파트명</td>
+                                        <td class="errTableTtl">발생일시</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>서울</td>
+                                        <td>영직아파트</td>
+                                        <td>2025.01.01 / 12:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>서울</td>
+                                        <td>영직아파트</td>
+                                        <td>2025.01.01 12:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>서울</td>
+                                        <td>영직아파트</td>
+                                        <td>2025.01.01 12:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>서울</td>
+                                        <td>영직아파트</td>
+                                        <td>2025.01.01 12:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>서울</td>
+                                        <td>영직아파트</td>
+                                        <td>2025.01.01 12:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>서울</td>
+                                        <td>영직아파트</td>
+                                        <td>2025.01.01 12:00:00</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="deviceStatus">
+                            <div class="deviceStatus1-1">
+                                <p>장비 성능표</p>
+                                <div>
+                                    <canvas id="perChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="deviceStatus1-2">
+                                <p>장비 상태 및 안전도</p>
+                                <p>(단위 : %)</p>
+                                <div class="deviceGauge">
+                                    <div
+                                            class="GaugeMeter10"
+                                            id="GaugeMeter_131"
+                                            data-back="rgba(174,174,174,0.5)"
+                                            data-label="좋음"
+                                            data-size="70"
+                                            data-style="arch"
+                                            data-width="10"
+                                            data-showvalue="true"
+                                            data-min="0"
+                                            data-total="100"
+                                            data-stripe="3"
+                                            data-used="80"
+                                            data-theme="green"
+                                            data-append=""
+                                    >
+                                    </div>
+                                    <div
+                                            class="GaugeMeter10"
+                                            id="GaugeMeter_132"
+                                            data-back="rgba(174,174,174,0.5)"
+                                            data-label="보통"
+                                            data-size="70"
+                                            data-style="arch"
+                                            data-width="10"
+                                            data-showvalue="true"
+                                            data-min="0"
+                                            data-total="100"
+                                            data-stripe="3"
+                                            data-used="80"
+                                            data-theme="green"
+                                            data-append=""
+                                    >
+                                    </div>
+                                    <div
+                                            class="GaugeMeter10"
+                                            id="GaugeMeter_133"
+                                            data-back="rgba(174,174,174,0.5)"
+                                            data-label="낮음"
+                                            data-size="70"
+                                            data-style="arch"
+                                            data-width="10"
+                                            data-showvalue="true"
+                                            data-min="0"
+                                            data-total="100"
+                                            data-stripe="3"
+                                            data-used="80"
+                                            data-theme="green"
+                                            data-append=""
+                                    >
+                                    </div>
+                                    <div
+                                            class="GaugeMeter10"
+                                            id="GaugeMeter_134"
+                                            data-back="rgba(174,174,174,0.5)"
+                                            data-label="안전"
+                                            data-size="70"
+                                            data-style="arch"
+                                            data-width="10"
+                                            data-showvalue="true"
+                                            data-min="0"
+                                            data-total="100"
+                                            data-stripe="3"
+                                            data-used="80"
+                                            data-theme="green"
+                                            data-append=""
+                                    >
+                                    </div>
+
+                                </div>
+                                <div class="devicePerson">
+                                    <div class="personInChare">
+                                        <p>담당자 : 이영직</p>
+                                        <p>010-1234-1234</p>
+                                    </div>
+                                    <div class="personInChare">
+                                        <p>담당자 : 이영직</p>
+                                        <p>010-1234-1234</p>
+                                    </div>
+                                    <div class="personInChare">
+                                        <p>담당자 : 이영직</p>
+                                        <p>010-1234-1234</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="areaContainer centerArea">
+                    <img src="./src/kepcoMap.jpg" alt="">
+                </div>
+                <div class="areaContainer areaContainerLast">
+                    <div class="areaBox upsideBox area1-4">
+                        <div class="search">
+                            <input type="search" name="" id="" placeholder="아파트 또는 지역명으로 검색">
+                            <i class="fa-solid fa-magnifying-glass glass"></i>
+
+                        </div>
+                        <p class="area1-4Ttl">📈 아파트별 모니터링 현황</p>
+                        <div class="area1-4Ttl2">
+                            <p>서울 지역</p>
+                            <p>전체 아파트 수 1,000 가구</p>
+                        </div>
+                        <div class="apart1-1">
+                            <p>영직 아파트 | 경북 안동시 --</p>
+                            <div>
+                                <div class="countApart">
+                                    <p>단지 수</p>
+                                    <p>100</p>
+                                </div>
+                                <div class="countApart">
+                                    <p>세대 수</p>
+                                    <p>100</p>
+
+                                </div>
+                                <div class="countApart">
+
+                                </div>
+                                <div class="countApart">
+                                    <p>전체장비</p>
+                                    <p>100</p>
+
+                                </div>
+                                <div class="countApart">
+                                    <p>정상</p>
+                                    <p class="green">90</p>
+
+                                </div>
+                                <div class="countApart">
+                                    <p>오류</p>
+                                    <p class="red">10</p>
+
+                                </div>
+                                <div class="countApart">
+                                    <p>가동률</p>
+                                    <p>90%</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apart1-2">
+                            <div class="apartDetail detailUpside">
+                                <div>
+                                    <p>👷 건설사</p>
+                                    <p>(주)영직건설</p>
+
+                                </div>
+                                <div>
+                                    <p>📌 관리사무소</p>
+                                    <p>02-1234-1234</p>
+
+                                </div>
+                            </div>
+                            <div class="apartDetail">
+                                <div>
+                                    <p>🗄️ 최초 설치일</p>
+                                    <p>2025. 01. 01</p>
+
+                                </div>
+                                <div>
+                                    <p>🗒 최근 교체일</p>
+                                    <p>2025. 01. 01</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areaBox area1-5">
+                        <div class="area1-5Box">
+                            <table class="area1-5Table">
+                                <thead>
+                                <tr>
+                                    <td class="thead">단지</td>
+                                    <td class="thead">동</td>
+                                    <td class="thead">호수</td>
+                                    <td class="thead">장비명</td>
+                                    <td class="thead">상태</td>
+                                    <td class="thead">설치일</td>
+                                    <td class="thead">동작여부</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1단지</td>
+                                    <td>101동</td>
+                                    <td>1001호</td>
+                                    <td>YJ1001</td>
+                                    <td>GOOD</td>
+                                    <td>2025. 01. 01</td>
+                                    <td class="mode">
+                                        <p class="on"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1단지</td>
+                                    <td>101동</td>
+                                    <td>1001호</td>
+                                    <td>YJ1001</td>
+                                    <td>GOOD</td>
+                                    <td>2025. 01. 01</td>
+                                    <td class="mode">
+                                        <p class="on"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1단지</td>
+                                    <td>101동</td>
+                                    <td>1001호</td>
+                                    <td>YJ1001</td>
+                                    <td>GOOD</td>
+                                    <td>2025. 01. 01</td>
+                                    <td class="mode">
+                                        <p class="on"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1단지</td>
+                                    <td>101동</td>
+                                    <td>1001호</td>
+                                    <td>YJ1001</td>
+                                    <td>GOOD</td>
+                                    <td>2025. 01. 01</td>
+                                    <td class="mode">
+                                        <p class="off"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1단지</td>
+                                    <td>101동</td>
+                                    <td>1001호</td>
+                                    <td>YJ1001</td>
+                                    <td>GOOD</td>
+                                    <td>2025. 01. 01</td>
+                                    <td class="mode">
+                                        <p class="off"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1단지</td>
+                                    <td>101동</td>
+                                    <td>1001호</td>
+                                    <td>YJ1001</td>
+                                    <td>GOOD</td>
+                                    <td>2025. 01. 01</td>
+                                    <td class="mode">
+                                        <p class="off"></p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="apart1-1">
+                            <p>영직 아파트 | 경북 안동시 --</p>
+                            <div>
+                                <div class="countApart">
+                                    <p>단지 수</p>
+                                    <p>100</p>
+                                </div>
+                                <div class="countApart">
+                                    <p>세대 수</p>
+                                    <p>100</p>
+
+                                </div>
+                                <div class="countApart">
+
+                                </div>
+                                <div class="countApart">
+                                    <p>전체장비</p>
+                                    <p>100</p>
+
+                                </div>
+                                <div class="countApart">
+                                    <p>정상</p>
+                                    <p class="green">90</p>
+
+                                </div>
+                                <div class="countApart">
+                                    <p>오류</p>
+                                    <p class="red">10</p>
+
+                                </div>
+                                <div class="countApart">
+                                    <p>가동률</p>
+                                    <p>90%</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+
